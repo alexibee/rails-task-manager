@@ -1,0 +1,10 @@
+<div class="form-group">
+  <%= simple_form_for(thing) do |f| %>
+      <%= f.input :title, input_html: { class: "form-control m-3"} %>
+      <%= f.input :details, input_html: { class: "form-control m-3"}  %>
+      <% if !thing.new_record? %>
+        <%= f.check_box :completed%> <span class="labelText">Completed</span>
+      <% end %>
+      <%= f.button :submit %>
+  <% end %>
+</div>

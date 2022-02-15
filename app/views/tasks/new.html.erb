@@ -1,11 +1,7 @@
 <h2> New Task </h2>
 
-<%= form_for (@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
+<div class="container row">
+  <%= render 'form', thing: @task %>
+</div>
 
 <%= link_to "Back to list", tasks_path %>
